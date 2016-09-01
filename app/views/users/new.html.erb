@@ -21,9 +21,10 @@ Password: <input type="password" name="user[password]"><br>
       <%= submit_tag("Submit") %>
 <% end %>
 -->
+<h1> New User </h1>
 <%= form_for @user do |f| %>
-  User name:<%= f.text_field :username %><br>
-  User email:<%= f.text_field  :email %><br>
-  User password:<%= f.password_field :password %>
-  <%= f.submit "New user" %>
+  <p>User name:<br><%= f.text_field :username %></p>
+  <p>User email:<br><%= f.text_field  :email %></p>
+  <p>User password:<br><%= f.password_field :password %></p>
+  <p><%= f.submit "New user" %></p>
 <% end %>
