@@ -1,0 +1,7 @@
+<h1> Edit User </h1>
+<%= form_for @user, url: {action: "update"} do |f| %>
+  <p>User name:<br><%= f.text_field :username %></p>
+  <p>User email:<br><%= f.text_field  :email %></p>
+  <p>User password:<br><%= f.password_field :password %></p>
+  <p><%= f.submit "Edit user" %></p>
+<% end %>

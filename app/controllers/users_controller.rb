@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_param) #User.new(username: params[:username], email: params[:email], password: params[:password]) #User.new(user_param)
+    print "====================================== CREATE ===================================================="
       if @user.save
         redirect_to new_user_path
       else
@@ -14,7 +15,15 @@ class UsersController < ApplicationController
   end
 
   def edit
+    print "====================================== EDIT ===================================================="
     @user = User.find(params[:id])
+  end
+
+  def update
+    print "====================================== update ===================================================="
+    @user = User.find(params[:id])
+    @user.update_attributes(user_param)
+
   end
 
   private
